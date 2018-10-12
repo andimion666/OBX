@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Orbox
+Comment=Orbox P2P Cryptocurrency
+Exec=Orbox-qt %u
+Terminal=false
+Type=Application
+Icon=Orbox128
+MimeType=x-scheme-handler/Orbox;
+Categories=Office;Finance;
+Name[es]=Orbox-qt.desktop

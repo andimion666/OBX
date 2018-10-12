@@ -1,0 +1,26 @@
+[Unit]
+Description=Orbox's distributed currency daemon
+After=network.target
+
+[Service]
+User=Orbox
+Group=Orbox
+
+Type=forking
+PIDFile=/var/lib/Orboxd/Orboxd.pid
+
+ExecStart=/usr/bin/Orboxd -daemon -pid=/var/lib/Orboxd/Orboxd.pid \
+          -conf=/etc/Orbox/Orbox.conf -datadir=/var/lib/Orboxd
+
+ExecStop=-/usr/bin/Orbox-cli -conf=/etc/Orbox/Orbox.conf \
+         -datadir=/var/lib/Orboxd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

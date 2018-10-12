@@ -1,0 +1,26 @@
+# /etc/conf.d/Orboxd: config file for /etc/init.d/Orboxd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/Orbox/Orbox.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/Orboxd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/Orboxd.pid"
+
+# Where to write Orboxd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/Orboxd"
+
+# User and group to own Orboxd process
+#BITCOIND_USER="Orbox"
+#BITCOIND_GROUP="Orbox"
+
+# Path to Orboxd executable
+#BITCOIND_BIN="/usr/bin/Orboxd"
+
+# Nice value to run Orboxd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""
